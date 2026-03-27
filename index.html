@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIPRO — Essenza Tecnologia Estética</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <img src="marca.png" alt="Essenza Tecnologia Estética" class="nav__logo-img" />
+    </div>
+    <ul class="nav__links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#tecnologia">Tecnologia</a></li>
+      <li><a href="#indicacoes">Indicações</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5531989670337" target="_blank" class="nav__cta">Solicitar Proposta <span>→</span></a>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#sobre" class="mob-link">Sobre</a></li>
+      <li><a href="#beneficios" class="mob-link">Benefícios</a></li>
+      <li><a href="#tecnologia" class="mob-link">Tecnologia</a></li>
+      <li><a href="#indicacoes" class="mob-link">Indicações</a></li>
+      <li><a href="#galeria" class="mob-link">Galeria</a></li>
+      <li><a href="#contato" class="mob-link">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary mob-cta">
+      <span>Falar no WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__grid"></div>
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <canvas class="hero__particles" id="particles"></canvas>
+
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="badge-dot"></span>
+        Representante Oficial HIPRO
+      </div>
+
+      <h1 class="hero__title">
+        <span class="hero__title-line line-1">LIFTING</span>
+        <span class="hero__title-line line-2">SEM<em> CIRURGIA</em></span>
+        <span class="hero__title-line line-3">RESULTADOS</span>
+        <span class="hero__title-line line-4">REAIS</span>
+      </h1>
+
+      <p class="hero__desc">
+        O HIPRO redefine os padrões da medicina estética. Tecnologia de ultrassom microfocado que atua nas camadas mais profundas da pele — mesmo nível de um lifting cirúrgico, sem cortes, sem agulhas.
+      </p>
+
+      <div class="hero__actions">
+        <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary">
+          <span>Quero para minha Clínica</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#tecnologia" class="btn btn--ghost">Conhecer a Tecnologia</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num" data-count="1">0</span>
+          <span class="stat__unit">sessão</span>
+          <p>resultado visível</p>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-count="90">0</span>
+          <span class="stat__unit">dias</span>
+          <p>evolução progressiva</p>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-count="12">0</span>
+          <span class="stat__unit">meses</span>
+          <p>duração do resultado</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO IMAGE RIGHT -->
+    <div class="hero__image-wrap" id="heroDevice">
+      <div class="hero__img-bg-glow"></div>
+      <img src="headline.png" alt="HIPRO equipamento" class="hero__headline-img" />
+      <div class="float-tag tag--1">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        Não invasivo
+      </div>
+      <div class="float-tag tag--2">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Zero downtime
+      </div>
+      <div class="float-tag tag--3">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.997.295-1.9.8-2.6a5 5 0 10-5.6 0c.505.7.785 1.603.8 2.6h4z"/></svg>
+        Estimula colágeno
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>HIPRO</span><span class="mx">✦</span>
+      <span>ESSENZA</span><span class="mx">✦</span>
+      <span>LIFTING SEM CIRURGIA</span><span class="mx">✦</span>
+      <span>TECNOLOGIA ESTÉTICA</span><span class="mx">✦</span>
+      <span>SEM DOWNTIME</span><span class="mx">✦</span>
+      <span>BIOESTIMULAÇÃO PROFUNDA</span><span class="mx">✦</span>
+      <span>HIPRO</span><span class="mx">✦</span>
+      <span>ESSENZA</span><span class="mx">✦</span>
+      <span>LIFTING SEM CIRURGIA</span><span class="mx">✦</span>
+      <span>TECNOLOGIA ESTÉTICA</span><span class="mx">✦</span>
+      <span>SEM DOWNTIME</span><span class="mx">✦</span>
+      <span>BIOESTIMULAÇÃO PROFUNDA</span><span class="mx">✦</span>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre__grid">
+        <div class="sobre__left">
+          <div class="section-label">O que é</div>
+          <h2 class="section-title">
+            A mais avançada<br>
+            <em>tecnologia de lifting</em><br>
+            não invasivo
+          </h2>
+          <p class="sobre__text">
+            O HIPRO é um equipamento de ultrassom microfocado de nova geração que promove um verdadeiro efeito lifting sem cortes, sem agulhas e com resultados naturais e progressivos.
+          </p>
+          <p class="sobre__text">
+            Sua tecnologia proprietária atua na <strong>SMAS</strong> — mesma estrutura tratada em cirurgias de lifting facial — criando pontos de coagulação térmica nas camadas mais profundas da pele, estimulando a produção intensa de colágeno e elastina.
+          </p>
+          <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary mt">
+            <span>Falar com Especialista</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="sobre__right">
+          <div class="feature-cards">
+            <div class="fcard">
+              <div class="fcard__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div class="fcard__content">
+                <h3>Procedimento Rápido</h3>
+                <p>De 20 a 60 minutos por sessão, sem necessidade de recuperação pós-procedimento.</p>
+              </div>
+            </div>
+            <div class="fcard">
+              <div class="fcard__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/></svg>
+              </div>
+              <div class="fcard__content">
+                <h3>Resultados Comprovados</h3>
+                <p>Resultado imediato com evolução progressiva ao longo de 90 dias.</p>
+              </div>
+            </div>
+            <div class="fcard">
+              <div class="fcard__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div class="fcard__content">
+                <h3>Todos os Fototipos</h3>
+                <p>Seguro e eficaz para todos os tipos de pele, com protocolos personalizados.</p>
+              </div>
+            </div>
+            <div class="fcard">
+              <div class="fcard__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+              <div class="fcard__content">
+                <h3>Sem Downtime</h3>
+                <p>O paciente retorna às atividades normais imediatamente após o procedimento.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIA -->
+  <section class="tecnologia" id="tecnologia">
+    <div class="tec-bg">
+      <div class="tec-orb tec-orb--1"></div>
+      <div class="tec-orb tec-orb--2"></div>
+    </div>
+    <div class="container">
+      <div class="section-label centered">Como Funciona</div>
+      <h2 class="section-title centered">Tecnologia que age<br><em>onde importa</em></h2>
+      <div class="tec__steps">
+        <div class="tec__step">
+          <div class="step__num">01</div>
+          <div class="step__content">
+            <h3>Avaliação Personalizada</h3>
+            <p>Antes da aplicação, o profissional realiza uma avaliação detalhada para definir profundidade, intensidade e o protocolo ideal para cada paciente.</p>
+          </div>
+          <div class="step__line"></div>
+        </div>
+        <div class="tec__step">
+          <div class="step__num">02</div>
+          <div class="step__content">
+            <h3>Energia Ultrassônica Precisa</h3>
+            <p>O HIPRO emite energia ultrassônica concentrada em pontos de coagulação térmica nas camadas SMAS, sub-dérmicas e dérmicas — com milimétrica precisão.</p>
+          </div>
+          <div class="step__line"></div>
+        </div>
+        <div class="tec__step">
+          <div class="step__num">03</div>
+          <div class="step__content">
+            <h3>Bioestimulação Profunda</h3>
+            <p>O calor gerado nas camadas profundas ativa a neocolagênese — produção de colágeno e elastina novos — promovendo lifting, firmeza e redefinição do contorno.</p>
+          </div>
+          <div class="step__line"></div>
+        </div>
+        <div class="tec__step">
+          <div class="step__num">04</div>
+          <div class="step__content">
+            <h3>Resultado Progressivo</h3>
+            <p>O efeito é imediato e continua evoluindo por até 90 dias, com duração dos resultados de até 12 meses — sem nenhum tempo de recuperação.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tec__visual">
+        <div class="skin-layers">
+          <div class="skin-label">Camadas da Pele</div>
+          <div class="layer layer--1"><span>Epiderme</span><div class="layer-bar"></div></div>
+          <div class="layer layer--2"><span>Derme</span><div class="layer-bar"></div></div>
+          <div class="layer layer--3"><span>Sub-derme</span><div class="layer-bar"></div></div>
+          <div class="layer layer--4 layer--active"><span>SMAS ✦ HIPRO atua aqui</span><div class="layer-bar"></div></div>
+          <div class="layer layer--5"><span>Músculo</span><div class="layer-bar"></div></div>
+          <div class="beam beam--1"></div>
+          <div class="beam beam--2"></div>
+          <div class="beam beam--3"></div>
+          <div class="beam-source"></div>
+        </div>
+        <div class="tec__badges">
+          <div class="tbadge"><span class="tbadge__n">4.5mm</span><span class="tbadge__l">Profundidade SMAS</span></div>
+          <div class="tbadge"><span class="tbadge__n">3.0mm</span><span class="tbadge__l">Camada sub-dérmica</span></div>
+          <div class="tbadge"><span class="tbadge__n">1.5mm</span><span class="tbadge__l">Camada dérmica</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="beneficios" id="beneficios">
+    <div class="container">
+      <div class="section-label">Vantagens Competitivas</div>
+      <h2 class="section-title">Por que oferecer<br><em>o HIPRO</em> na sua clínica?</h2>
+      <div class="ben__grid">
+        <div class="ben-card">
+          <div class="ben-card__top"><span class="ben-card__icon">⚡</span><span class="ben-card__tag">Alta Demanda</span></div>
+          <h3>Lifting sem Cirurgia</h3>
+          <p>Tratamento com enorme apelo no mercado: resultados cirúrgicos sem os riscos e downtime de um procedimento invasivo.</p>
+        </div>
+        <div class="ben-card">
+          <div class="ben-card__top"><span class="ben-card__icon">💎</span><span class="ben-card__tag">Ticket Alto</span></div>
+          <h3>Retorno Financeiro Rápido</h3>
+          <p>Um dos equipamentos com maior ticket médio por sessão. Alta rentabilidade e rápido retorno sobre o investimento.</p>
+        </div>
+        <div class="ben-card featured">
+          <div class="ben-card__top"><span class="ben-card__icon">🎯</span><span class="ben-card__tag">Destaque</span></div>
+          <h3>Diferencial Clínico Real</h3>
+          <p>Tecnologia de ponta que coloca sua clínica na vanguarda da medicina estética e atrai um perfil premium de pacientes.</p>
+          <div class="card-shine"></div>
+        </div>
+        <div class="ben-card">
+          <div class="ben-card__top"><span class="ben-card__icon">📈</span><span class="ben-card__tag">Escalável</span></div>
+          <h3>Múltiplas Indicações</h3>
+          <p>Face e corpo: flacidez, papada, abdômen, braços, coxas, glúteos. Um equipamento, inúmeros protocolos.</p>
+        </div>
+        <div class="ben-card">
+          <div class="ben-card__top"><span class="ben-card__icon">🤝</span><span class="ben-card__tag">Suporte Total</span></div>
+          <h3>Parceria Completa</h3>
+          <p>Comprando com a Essenza: curso avançado, desconto oficial e suporte especializado contínuo para sua equipe.</p>
+        </div>
+        <div class="ben-card">
+          <div class="ben-card__top"><span class="ben-card__icon">🛡️</span><span class="ben-card__tag">Segurança</span></div>
+          <h3>Financiamento Facilitado</h3>
+          <p>Parcelamento em até 36x + 60 dias para começar a pagar. Acesso ao equipamento com o menor impacto no caixa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDICAÇÕES -->
+  <section class="indicacoes" id="indicacoes">
+    <div class="container">
+      <div class="ind__grid">
+        <div class="ind__left">
+          <div class="section-label">Aplicações Clínicas</div>
+          <h2 class="section-title">Indicado para<br><em>face e corpo</em></h2>
+          <p>O HIPRO oferece protocolos específicos para cada região, com energia e profundidade ajustadas para máxima eficácia e segurança.</p>
+          <div class="ind__tabs">
+            <button class="ind__tab active" data-target="face">Rosto</button>
+            <button class="ind__tab" data-target="corpo">Corpo</button>
+          </div>
+          <div class="ind__list active" id="face">
+            <div class="ind__item"><span class="ind__dot"></span>Flacidez facial e papada</div>
+            <div class="ind__item"><span class="ind__dot"></span>Laxidez de mandíbula (bulldog)</div>
+            <div class="ind__item"><span class="ind__dot"></span>Sobrancelhas caídas</div>
+            <div class="ind__item"><span class="ind__dot"></span>Sulcos nasolabiais e rugas</div>
+            <div class="ind__item"><span class="ind__dot"></span>Marcas de expressão</div>
+            <div class="ind__item"><span class="ind__dot"></span>Contorno facial</div>
+          </div>
+          <div class="ind__list" id="corpo">
+            <div class="ind__item"><span class="ind__dot"></span>Flacidez abdominal</div>
+            <div class="ind__item"><span class="ind__dot"></span>Flacidez de braços</div>
+            <div class="ind__item"><span class="ind__dot"></span>Flacidez interna de coxas</div>
+            <div class="ind__item"><span class="ind__dot"></span>Glúteos e região posterior</div>
+            <div class="ind__item"><span class="ind__dot"></span>Região do pescoço e decote</div>
+            <div class="ind__item"><span class="ind__dot"></span>Joelhos e região periorbital</div>
+          </div>
+        </div>
+        <div class="ind__right">
+          <div class="ind__photo-wrap">
+            <div class="ind__photo-glow"></div>
+            <img src="face corpo.JPG" alt="Indicações face e corpo HIPRO" class="ind__photo" />
+            <div class="ind__photo-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <div class="section-label centered">Resultados em Evidência</div>
+      <h2 class="section-title centered">O HIPRO em<br><em>ação</em></h2>
+    </div>
+    <div class="galeria__grid">
+      <div class="gal-item gal-item--tall">
+        <img src="4.jpg" alt="HIPRO — The Power of Integration" loading="lazy" />
+        <div class="gal-item__overlay">
+          <div class="gal-item__line"></div>
+          <span>The Power of Integration</span>
+        </div>
+      </div>
+      <div class="gal-item">
+        <img src="2.jpg" alt="HIPRO display tecnologia" loading="lazy" />
+        <div class="gal-item__overlay">
+          <div class="gal-item__line"></div>
+          <span>Tecnologia de Precisão</span>
+        </div>
+      </div>
+      <div class="gal-item">
+        <img src="1.jpg" alt="HIPRO resultado" loading="lazy" />
+        <div class="gal-item__overlay">
+          <div class="gal-item__line"></div>
+          <span>Resultados Reais</span>
+        </div>
+      </div>
+      <div class="gal-item gal-item--wide">
+        <img src="3.jpg" alt="HIPRO protocolo" loading="lazy" />
+        <div class="gal-item__overlay">
+          <div class="gal-item__line"></div>
+          <span>Protocolo Avançado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESSENZA -->
+  <section class="essenza" id="essenza">
+    <div class="container">
+      <div class="essenza__inner">
+        <div class="essenza__text">
+          <div class="section-label">Representante Oficial</div>
+          <h2 class="section-title">Comprando com a<br><em>Essenza</em>, você ganha:</h2>
+          <div class="essenza__perks">
+            <div class="perk">
+              <div class="perk__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+              </div>
+              <div>
+                <h4>Curso Avançado</h4>
+                <p>Treinamento completo para sua equipe dominar todos os protocolos do HIPRO.</p>
+              </div>
+            </div>
+            <div class="perk">
+              <div class="perk__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z"/></svg>
+              </div>
+              <div>
+                <h4>Desconto Oficial</h4>
+                <p>Condições exclusivas de preço e financiamento disponíveis apenas via representação Essenza.</p>
+              </div>
+            </div>
+            <div class="perk">
+              <div class="perk__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+              </div>
+              <div>
+                <h4>Suporte Especializado</h4>
+                <p>Acompanhamento técnico e comercial contínuo para maximizar seus resultados.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="essenza__finance">
+          <div class="finance-card">
+            <div class="finance-card__header"><span>Financiamento Especial</span></div>
+            <div class="finance-card__body">
+              <div class="fin-main">
+                <span class="fin-x">36</span>
+                <span class="fin-vezes">x</span>
+              </div>
+              <div class="fin-plus">+</div>
+              <div class="fin-days">
+                <span class="fin-d">60</span>
+                <span class="fin-dl">dias para<br>começar a pagar</span>
+              </div>
+              <div class="fin-tag">Preço melhor que Black Friday</div>
+            </div>
+            <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary full">
+              <span>Quero essa Condição</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO CTA FINAL -->
+  <section class="contato" id="contato">
+    <div class="contato-bg"><div class="contato-orb"></div></div>
+    <div class="container">
+      <div class="contato__inner">
+        <div class="section-label centered">Entre em Contato</div>
+        <h2 class="section-title centered">Leve o HIPRO para<br>sua <em>clínica agora</em></h2>
+        <p class="contato__desc">Nossa equipe está pronta para apresentar uma proposta personalizada e ajudá-la a transformar seu negócio com a mais avançada tecnologia estética do mercado.</p>
+        <div class="contato__actions">
+          <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary btn--lg">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>Chamar no WhatsApp</span>
+          </a>
+          <a href="https://www.instagram.com/essenzarepresentacao/" target="_blank" class="btn btn--ghost btn--lg">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Ver no Instagram</span>
+          </a>
+        </div>
+        <div class="contato__numero">
+          <span>ou ligue / WhatsApp:</span>
+          <a href="https://wa.me/5531989670337" target="_blank">+55 31 98967-0337</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="marca.png" alt="Essenza" class="footer__logo-img" />
+          <p>Tecnologia Estética de Alta Performance</p>
+          <p class="footer__sub">Representante Oficial HIPRO</p>
+        </div>
+        <div class="footer__links">
+          <a href="#sobre">Sobre</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#tecnologia">Tecnologia</a>
+          <a href="#indicacoes">Indicações</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footer__contact">
+          <a href="https://wa.me/5531989670337" target="_blank" class="footer__cinfo">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            +55 31 98967-0337
+          </a>
+          <a href="https://www.instagram.com/essenzarepresentacao/" target="_blank" class="footer__cinfo">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;flex-shrink:0"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @essenzarepresentacao
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 Essenza Tecnologia Estética. Todos os direitos reservados.</p>
+        <p>Representante Oficial HIPRO</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -168,6 +168,14 @@ function initCounters() {
 
 /* ── Scroll Animations ── */
 function initScrollAnimations() {
+  // Service cards
+  gsap.utils.toArray('.srv-card').forEach((c, i) => {
+    gsap.fromTo(c, { opacity: 0, y: 32 }, {
+      opacity: 1, y: 0, duration: .8, delay: i * .1, ease: 'power3.out',
+      scrollTrigger: { trigger: '.srv__grid', start: 'top 88%', once: true }
+    });
+  });
+
   // Generic fade-up for section labels
   gsap.utils.toArray('.section-label').forEach(el => {
     gsap.fromTo(el, { opacity: 0, x: -16 }, {

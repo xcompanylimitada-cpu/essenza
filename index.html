@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -34,8 +34,8 @@
     .dor__intro-quote {
       font-family: var(--font-display);
       font-size: clamp(1.9rem, 3.2vw, 2.8rem);
-      font-style: italic;
-      font-weight: 300;
+      font-style: normal; font-weight: 500;
+      font-weight: 200;
       line-height: 1.2;
       color: var(--white);
       margin-bottom: 1.8rem;
@@ -43,7 +43,7 @@
     }
     .dor__intro-quote em {
       color: var(--accent);
-      font-style: italic;
+      font-style: normal; font-weight: 500;
     }
     .dor__intro p,
     .dor__intro-body {
@@ -120,7 +120,7 @@
     .dor__solucao h3 {
       font-family: var(--font-display);
       font-size: clamp(2rem, 3.5vw, 2.8rem);
-      font-weight: 300;
+      font-weight: 200;
       line-height: 1.35;
       margin-bottom: 1.2rem;
     }
@@ -215,8 +215,8 @@
     .mercado__quote-block blockquote {
       font-family: var(--font-display);
       font-size: clamp(1.3rem, 2vw, 1.8rem);
-      font-style: italic;
-      font-weight: 300;
+      font-style: normal; font-weight: 500;
+      font-weight: 200;
       line-height: 1.5;
       color: var(--white);
       position: relative;
@@ -291,8 +291,8 @@
     .dep-card blockquote {
       font-family: var(--font-display);
       font-size: 1.15rem;
-      font-style: italic;
-      font-weight: 300;
+      font-style: normal; font-weight: 500;
+      font-weight: 200;
       line-height: 1.6;
       color: var(--white);
       margin-bottom: 1.8rem;
@@ -500,11 +500,11 @@
     .urgencia h2 {
       font-family: var(--font-display);
       font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 300;
+      font-weight: 200;
       line-height: 1.2;
       margin-bottom: 1.5rem;
     }
-    .urgencia h2 em { font-style: italic; color: var(--accent); }
+    .urgencia h2 em { font-style: normal; font-weight: 500; color: var(--accent); }
     .urgencia p {
       font-size: 1rem;
       color: var(--white-dim);
@@ -762,13 +762,10 @@
       <img src="marca.png" alt="Essenza Tecnologia Estética" class="nav__logo-img" />
     </div>
     <ul class="nav__links">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#mercado">Mercado</a></li>
-      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">O Equipamento</a></li>
       <li><a href="#beneficios">Benefícios</a></li>
-      <li><a href="#tecnologia">Tecnologia</a></li>
-      <li><a href="#indicacoes">Indicações</a></li>
-      <li><a href="#contato">Contato</a></li>
+      <li><a href="#roi">Retorno</a></li>
+      <li><a href="#faq">Dúvidas</a></li>
     </ul>
     <a href="https://wa.me/5531989670337" target="_blank" class="nav__cta">Solicitar Proposta <span>→</span></a>
     <button class="nav__hamburger" id="hamburger" aria-label="Menu">
@@ -779,13 +776,10 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="#sobre" class="mob-link">Sobre</a></li>
-      <li><a href="#mercado" class="mob-link">Mercado</a></li>
-      <li><a href="#servicos" class="mob-link">Serviços</a></li>
+      <li><a href="#sobre" class="mob-link">O Equipamento</a></li>
       <li><a href="#beneficios" class="mob-link">Benefícios</a></li>
-      <li><a href="#tecnologia" class="mob-link">Tecnologia</a></li>
-      <li><a href="#indicacoes" class="mob-link">Indicações</a></li>
-      <li><a href="#contato" class="mob-link">Contato</a></li>
+      <li><a href="#roi" class="mob-link">Retorno</a></li>
+      <li><a href="#faq" class="mob-link">Dúvidas</a></li>
     </ul>
     <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary mob-cta">
       <span>Falar no WhatsApp</span>
@@ -813,15 +807,15 @@
       </h1>
 
       <p class="hero__desc">
-        O HIPRO redefine os padrões da medicina estética. Tecnologia de ultrassom microfocado que atua nas camadas mais profundas da pele — mesmo nível de um lifting cirúrgico, sem cortes, sem agulhas, sem downtime.
+        A tecnologia que cirurgiões levaram décadas para dominar — agora disponível na sua clínica, sem bisturi, sem agulha, sem tempo de recuperação. O HIPRO atua na camada mais profunda da pele e entrega o que o seu paciente mais quer: resultado visível, na primeira sessão.
       </p>
 
       <div class="hero__actions">
         <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary">
-          <span>Quero para minha Clínica</span>
+          <span>Solicitar Proposta</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#tecnologia" class="btn btn--ghost">Conhecer a Tecnologia</a>
+        <a href="#sobre" class="btn btn--ghost">Entender a tecnologia</a>
       </div>
 
       <div class="hero__stats">
@@ -874,129 +868,42 @@
     <div class="marquee-track">
       <span>HIPRO</span><span class="mx">✦</span>
       <span>ESSENZA</span><span class="mx">✦</span>
-      <span>LOCAÇÃO</span><span class="mx">✦</span>
-      <span>VENDA DE TECNOLOGIA</span><span class="mx">✦</span>
-      <span>MENTORIAS</span><span class="mx">✦</span>
-      <span>CURSOS AVANÇADOS</span><span class="mx">✦</span>
       <span>LIFTING SEM CIRURGIA</span><span class="mx">✦</span>
-      <span>SEM DOWNTIME</span><span class="mx">✦</span>
-      <span>BIOESTIMULAÇÃO PROFUNDA</span><span class="mx">✦</span>
+      <span>ZERO DOWNTIME</span><span class="mx">✦</span>
+      <span>RESULTADO NA 1ª SESSÃO</span><span class="mx">✦</span>
+      <span>SEM CARTUCHO</span><span class="mx">✦</span>
+      <span>ROI EM ATÉ 6 MESES</span><span class="mx">✦</span>
+      <span>REPRESENTANTE OFICIAL</span><span class="mx">✦</span>
       <span>HIPRO</span><span class="mx">✦</span>
       <span>ESSENZA</span><span class="mx">✦</span>
-      <span>LOCAÇÃO</span><span class="mx">✦</span>
-      <span>VENDA DE TECNOLOGIA</span><span class="mx">✦</span>
-      <span>MENTORIAS</span><span class="mx">✦</span>
-      <span>CURSOS AVANÇADOS</span><span class="mx">✦</span>
       <span>LIFTING SEM CIRURGIA</span><span class="mx">✦</span>
-      <span>SEM DOWNTIME</span><span class="mx">✦</span>
-      <span>BIOESTIMULAÇÃO PROFUNDA</span><span class="mx">✦</span>
+      <span>ZERO DOWNTIME</span><span class="mx">✦</span>
+      <span>RESULTADO NA 1ª SESSÃO</span><span class="mx">✦</span>
+      <span>SEM CARTUCHO</span><span class="mx">✦</span>
+      <span>ROI EM ATÉ 6 MESES</span><span class="mx">✦</span>
+      <span>REPRESENTANTE OFICIAL</span><span class="mx">✦</span>
     </div>
   </div>
 
-  <!-- DOR — PAIN SECTION -->
-  <section class="dor" id="dor">
-    <div class="container">
-      <div class="dor__intro">
-        <div class="section-label centered">A realidade do mercado</div>
-        <h2 class="dor__intro-quote">
-          Sua clínica perde pacientes todo mês<br>para clínicas que <em>têm o que você ainda não tem.</em>
-        </h2>
-        <p class="dor__intro-body">
-          O perfil de paciente está mudando. Eles pesquisam antes. Eles comparam. Eles querem resultado sem cirurgia, sem recuperação e sem risco. Se a sua clínica não entrega isso, eles vão para quem entrega.
-        </p>
-      </div>
-
-      <div class="dor__grid">
-        <div class="dor__item">
-          <div class="dor__item-icon">😔</div>
-          <h3>Pacientes que somem após a consulta</h3>
-          <p>Você investe em captação, a paciente chega, gosta do seu atendimento — mas vai fazer o procedimento em outra clínica que tem uma tecnologia mais moderna. E você não sabe nem por quê ela não voltou.</p>
-        </div>
-        <div class="dor__item">
-          <div class="dor__item-icon">📉</div>
-          <h3>Equipamentos que não geram receita real</h3>
-          <p>Tem equipamento parado porque o resultado não convence, o paciente não recomenda e o ticket médio não cresce. Você pagou caro por algo que não movimenta a sua agenda — e isso dói no caixa todo mês.</p>
-        </div>
-        <div class="dor__item">
-          <div class="dor__item-icon">🏥</div>
-          <h3>Concorrência avançando enquanto você fica no mesmo lugar</h3>
-          <p>A clínica do bairro ao lado acabou de adquirir uma tecnologia nova e já está com agenda lotada. As pacientes premium do seu círculo estão indo lá. Você sente, mas ainda não tomou a decisão.</p>
-        </div>
-        <div class="dor__item">
-          <div class="dor__item-icon">💸</div>
-          <h3>Procedimentos com margem baixa e resultado incerto</h3>
-          <p>Vive em protocolos que exigem muitos insumos, tempo de procedimento longo, resultado que demora, paciente insatisfeita — e o retorno financeiro que não compensa a energia que você coloca. Tem que ser diferente.</p>
-        </div>
-      </div>
-
-      <div class="dor__solucao">
-        <h3>
-          E se uma única tecnologia resolvesse tudo isso?<br>
-          <strong>Resultado cirúrgico. Sem cirurgia. A partir de uma sessão.</strong>
-        </h3>
-        <p>
-          O HIPRO é o equipamento que une o que o paciente mais quer — resultado rápido, visível e sem risco — com o que você mais precisa — alto ticket, ROI rápido e agenda cheia de indicações espontâneas.
-        </p>
-        <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary">
-          <span>Quero conhecer o HIPRO</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMO FUNCIONA -->
-  <section class="como" id="como">
-    <div class="container">
-      <div class="como__header">
-        <div class="section-label centered">Entenda o processo</div>
-        <h2 class="section-title centered">Como o HIPRO<br><em>transforma a pele</em></h2>
-        <p>A tecnologia mais avançada de lifting não invasivo do mercado em 4 etapas simples que você precisa conhecer.</p>
-      </div>
-      <div class="como__steps">
-        <div class="como__step">
-          <div class="como__step-num">01</div>
-          <h3>Ultrassom Microfocado</h3>
-          <p>O aparelho emite feixes de energia ultrassônica com precisão milimétrica, penetrando camadas profundas da pele sem tocar a superfície. Zero dano externo.</p>
-        </div>
-        <div class="como__step">
-          <div class="como__step-num">02</div>
-          <h3>Coagulação Térmica na SMAS</h3>
-          <p>Os pontos de energia criam microlesões térmicas controladas na SMAS — a mesma camada que cirurgiões atingem em uma cirurgia de lifting. É onde o resultado real acontece.</p>
-        </div>
-        <div class="como__step">
-          <div class="como__step-num">03</div>
-          <h3>Bioestimulação Intensa</h3>
-          <p>O organismo responde com produção intensa de colágeno e elastina. A pele começa a se firmar, contrair e redefinir contornos — um processo que continua por até 90 dias após a sessão.</p>
-        </div>
-        <div class="como__step">
-          <div class="como__step-num">04</div>
-          <h3>Resultado Progressivo e Duradouro</h3>
-          <p>O efeito lifting vai se consolidando ao longo dos meses. Resultado visível na primeira sessão, evolução progressiva, duração de 12 a 18 meses — sem cirurgia, sem agulha, sem tempo de recuperação.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
+  <!-- SOBRE / O EQUIPAMENTO -->
   <section class="sobre" id="sobre">
     <div class="container">
       <div class="sobre__grid">
         <div class="sobre__left">
-          <div class="section-label">O que é</div>
+          <div class="section-label">O que é o HIPRO</div>
           <h2 class="section-title">
-            A mais avançada<br>
-            <em>tecnologia de lifting</em><br>
-            não invasivo
+            O padrão-ouro<br>
+            do lifting<br>
+            <em>não invasivo.</em>
           </h2>
           <p class="sobre__text">
-            O HIPRO é um equipamento de ultrassom microfocado de nova geração que promove um verdadeiro efeito lifting sem cortes, sem agulhas e com resultados naturais e progressivos.
+            O HIPRO é um equipamento de ultrassom microfocado que atinge a <strong>SMAS</strong> — a mesma camada aponeurótica tratada em cirurgias de lifting. Sem incisão. Sem anestesia. Sem afastamento da paciente.
           </p>
           <p class="sobre__text">
-            Sua tecnologia proprietária atua na <strong>SMAS</strong> — mesma estrutura tratada em cirurgias de lifting facial — criando pontos de coagulação térmica nas camadas mais profundas da pele, estimulando a produção intensa de colágeno e elastina.
+            A tecnologia exclusiva <strong>DDC (Digital Depth Control)</strong> permite que você controle com exatidão milimétrica a profundidade de cada disparo — algo que nenhum outro equipamento do mercado oferece. Cada sessão é personalizada. Cada resultado é previsível.
           </p>
           <p class="sobre__text">
-            Com a tecnologia exclusiva <strong>DDC (Digital Depth Control)</strong>, o HIPRO é o único equipamento do mercado que permite ao profissional calibrar com precisão absoluta a profundidade e a intensidade de cada disparo — protocolizando o tratamento de forma individualizada para cada paciente.
+            E sem cartucho descartável: custo operacional mínimo, margem máxima em cada procedimento.
           </p>
           <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary mt">
             <span>Falar com Especialista</span>
@@ -1010,8 +917,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
               </div>
               <div class="fcard__content">
-                <h3>Procedimento Rápido</h3>
-                <p>De 20 a 60 minutos por sessão, sem necessidade de recuperação pós-procedimento. A paciente entra, faz e retoma sua rotina imediatamente.</p>
+                <h3>20 a 60 minutos por sessão</h3>
+                <p>A paciente entra, realiza o procedimento e retoma sua rotina no mesmo instante. Sem recuperação, sem cuidados pós, sem ausência da vida social.</p>
               </div>
             </div>
             <div class="fcard">
@@ -1019,8 +926,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/></svg>
               </div>
               <div class="fcard__content">
-                <h3>Resultados Comprovados</h3>
-                <p>Efeito lifting visível a partir da primeira sessão. Evolução progressiva ao longo de 90 dias com a neocolagênese em plena atividade.</p>
+                <h3>Resultado imediato — e crescente</h3>
+                <p>Efeito tensor percebido logo após a sessão. A neocolagênese continua ativa por 90 dias, aprimorando progressivamente o resultado sem nenhuma intervenção adicional.</p>
               </div>
             </div>
             <div class="fcard">
@@ -1028,8 +935,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
               </div>
               <div class="fcard__content">
-                <h3>Tecnologia DDC Exclusiva</h3>
-                <p>Controle Digital de Profundidade único no mercado. Precisão absoluta em cada disparo, protocolo individualizado para cada paciente.</p>
+                <h3>DDC — exclusivo no mercado</h3>
+                <p>Controle Digital de Profundidade que permite individualizar cada protocolo com precisão absoluta. Nenhum outro equipamento oferece esse nível de personalização.</p>
               </div>
             </div>
             <div class="fcard">
@@ -1037,279 +944,10 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
               </div>
               <div class="fcard__content">
-                <h3>Sem Cartucho, Sem Limite</h3>
-                <p>Ao contrário da concorrência, o HIPRO não usa cartuchos descartáveis. Isso significa custo operacional mínimo e rentabilidade máxima por procedimento.</p>
+                <h3>Zero cartucho, margem real</h3>
+                <p>Diferente da concorrência, o HIPRO não tem custo recorrente de insumo. Cada procedimento é quase integralmente lucro — e isso muda completamente a equação do seu negócio.</p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MERCADO -->
-  <section class="mercado" id="mercado">
-    <div class="container">
-      <div class="mercado__inner">
-        <div class="mercado__text">
-          <div class="section-label">O mercado em números</div>
-          <h2 class="section-title">
-            Invista no setor que<br><em>nunca para de crescer</em>
-          </h2>
-          <p>
-            A Medicina Estética é um dos mercados mais resilientes da economia brasileira. Enquanto outros setores sofreram com crises, a estética seguiu crescendo — ano após ano, crise após crise.
-          </p>
-          <p>
-            <strong>Segundo a ABME, o setor movimenta mais de R$ 5 bilhões por ano</strong> e registra crescimento consistente acima da média da economia. E o lifting não invasivo é a categoria de maior expansão dentro desse mercado.
-          </p>
-          <p>
-            Pacientes que antes adiavam cirurgias por medo ou por custo agora encontram uma alternativa real — eficaz, segura e acessível. A demanda está pronta. A pergunta é: a sua clínica está preparada para atendê-la?
-          </p>
-          <div class="mercado__stats">
-            <div class="mstat">
-              <span class="mstat__num">R$5Bi</span>
-              <span class="mstat__label">movimentados por ano no setor</span>
-            </div>
-            <div class="mstat">
-              <span class="mstat__num">+7%</span>
-              <span class="mstat__label">crescimento anual consistente</span>
-            </div>
-            <div class="mstat">
-              <span class="mstat__num">#1</span>
-              <span class="mstat__label">lifting não invasivo mais buscado</span>
-            </div>
-            <div class="mstat">
-              <span class="mstat__num">3x</span>
-              <span class="mstat__label">mais indicações do que cirurgias</span>
-            </div>
-          </div>
-        </div>
-        <div class="mercado__visual">
-          <div class="mercado__quote-block">
-            <blockquote>
-              "O paciente de hoje não quer recuperação, não quer risco e não quer esperar. Quer resultado agora. E o HIPRO entrega exatamente isso."
-            </blockquote>
-            <cite>— Especialista em Medicina Estética</cite>
-          </div>
-          <div class="mercado__badges" style="margin-top:20px">
-            <div class="mbadge">Lifting Não Invasivo</div>
-            <div class="mbadge">Alta Demanda 2025</div>
-            <div class="mbadge">Ticket Premium</div>
-            <div class="mbadge">Zero Downtime</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPARATIVO -->
-  <section class="comparativo">
-    <div class="container">
-      <div class="comp__header">
-        <div class="section-label centered">Compare e decida</div>
-        <h2 class="section-title centered">HIPRO vs.<br><em>outras alternativas</em></h2>
-      </div>
-      <div style="overflow-x:auto">
-        <table class="comp__table">
-          <thead>
-            <tr>
-              <th style="text-align:left">Critério</th>
-              <th class="highlight">HIPRO</th>
-              <th>Cirurgia Facial</th>
-              <th>Outros Ultrassons</th>
-              <th>Bioestimuladores</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Resultado visível na 1ª sessão</td>
-              <td class="highlight comp__check">✓</td>
-              <td class="comp__check">✓</td>
-              <td class="comp__mid">Parcial</td>
-              <td class="comp__x">✗</td>
-            </tr>
-            <tr>
-              <td>Sem tempo de recuperação</td>
-              <td class="highlight comp__check">✓</td>
-              <td class="comp__x">✗</td>
-              <td class="comp__check">✓</td>
-              <td class="comp__check">✓</td>
-            </tr>
-            <tr>
-              <td>Atua na SMAS (lifting profundo)</td>
-              <td class="highlight comp__check">✓</td>
-              <td class="comp__check">✓</td>
-              <td class="comp__mid">Alguns</td>
-              <td class="comp__x">✗</td>
-            </tr>
-            <tr>
-              <td>Sem cartucho descartável</td>
-              <td class="highlight comp__check">✓</td>
-              <td>N/A</td>
-              <td class="comp__x">✗</td>
-              <td>N/A</td>
-            </tr>
-            <tr>
-              <td>Tecnologia DDC (controle digital)</td>
-              <td class="highlight comp__check">✓</td>
-              <td class="comp__x">✗</td>
-              <td class="comp__x">✗</td>
-              <td class="comp__x">✗</td>
-            </tr>
-            <tr>
-              <td>Custo operacional baixo</td>
-              <td class="highlight comp__check">✓</td>
-              <td class="comp__x">✗</td>
-              <td class="comp__x">✗</td>
-              <td class="comp__mid">Médio</td>
-            </tr>
-            <tr>
-              <td>Face + Corpo no mesmo aparelho</td>
-              <td class="highlight comp__check">✓</td>
-              <td class="comp__x">✗</td>
-              <td class="comp__mid">Alguns</td>
-              <td class="comp__mid">Alguns</td>
-            </tr>
-            <tr>
-              <td>Duração do resultado</td>
-              <td class="highlight" style="color:var(--accent);font-weight:500">12–18 meses</td>
-              <td>5–10 anos</td>
-              <td>6–12 meses</td>
-              <td>12–18 meses</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section class="servicos" id="servicos">
-    <div class="container">
-      <div class="section-label centered">O que oferecemos</div>
-      <h2 class="section-title centered">Muito mais do que<br><em>um equipamento</em></h2>
-      <p class="servicos__desc">A Essenza é sua parceira completa em tecnologia estética — do equipamento ao conhecimento que transforma clínicas.</p>
-      <div class="srv__grid">
-
-        <div class="srv-card">
-          <div class="srv-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 17H5a2 2 0 00-2 2v1h18v-1a2 2 0 00-2-2h-4M12 3v10m0 0l-3-3m3 3l3-3"/><rect x="5" y="3" width="14" height="11" rx="2"/></svg>
-          </div>
-          <div class="srv-card__num">01</div>
-          <h3>Locação</h3>
-          <p>Acesse a tecnologia HIPRO sem o investimento inicial da compra. Ideal para clínicas que querem testar o equipamento, ou que preferem flexibilidade de caixa. Você começa a gerar receita antes de desembolsar qualquer valor de compra.</p>
-          <ul class="srv-card__list">
-            <li>Contrato flexível</li>
-            <li>Suporte técnico incluso</li>
-            <li>Atualização de software</li>
-          </ul>
-          <a href="https://wa.me/5531989670337" target="_blank" class="srv-card__link">Consultar condições <span>→</span></a>
-        </div>
-
-        <div class="srv-card srv-card--featured">
-          <div class="srv-card__badge">Mais Procurado</div>
-          <div class="srv-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
-          </div>
-          <div class="srv-card__num">02</div>
-          <h3>Venda de Tecnologia</h3>
-          <p>Adquira o HIPRO com as melhores condições do mercado. Como representante oficial, oferecemos preço exclusivo, financiamento facilitado e suporte completo pós-venda. Muitos clientes pagam o equipamento com os próprios procedimentos realizados no primeiro mês.</p>
-          <ul class="srv-card__list">
-            <li>36x + 60 dias para pagar</li>
-            <li>Preço de representante oficial</li>
-            <li>Garantia e suporte técnico</li>
-          </ul>
-          <a href="https://wa.me/5531989670337" target="_blank" class="srv-card__link">Solicitar proposta <span>→</span></a>
-          <div class="card-shine"></div>
-        </div>
-
-        <div class="srv-card">
-          <div class="srv-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          </div>
-          <div class="srv-card__num">03</div>
-          <h3>Mentorias</h3>
-          <p>Sessões individuais ou em grupo com especialistas para acelerar seus resultados clínicos e comerciais. Aprenda a posicionar, vender e fidelizar pacientes com o HIPRO — e a construir uma agenda que se paga sozinha.</p>
-          <ul class="srv-card__list">
-            <li>Mentoria clínica e comercial</li>
-            <li>Estratégias de precificação</li>
-            <li>Marketing para estética</li>
-          </ul>
-          <a href="https://wa.me/5531989670337" target="_blank" class="srv-card__link">Saber mais <span>→</span></a>
-        </div>
-
-        <div class="srv-card">
-          <div class="srv-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path d="M12 14V21"/></svg>
-          </div>
-          <div class="srv-card__num">04</div>
-          <h3>Cursos Avançados</h3>
-          <p>Formação completa para dominar todos os protocolos do HIPRO — face, corpo e pescoço. Teoria e prática com certificação oficial para você e sua equipe. Saia do curso com protocolo montado e pronto para executar.</p>
-          <ul class="srv-card__list">
-            <li>Protocolo face completo</li>
-            <li>Protocolos corporais</li>
-            <li>Certificação reconhecida</li>
-          </ul>
-          <a href="https://wa.me/5531989670337" target="_blank" class="srv-card__link">Ver programação <span>→</span></a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- TECNOLOGIA -->
-  <section class="tecnologia" id="tecnologia">
-    <div class="container">
-      <div class="tec__header">
-        <div class="section-label">Como funciona</div>
-        <h2 class="section-title">
-          Tecnologia que atua<br>
-          <em>onde outros não chegam</em>
-        </h2>
-        <p class="tec__desc">O HIPRO opera em múltiplas profundidades com precisão milimétrica, atingindo a SMAS — a estrutura que nenhuma outra tecnologia não invasiva consegue tratar com essa eficácia.</p>
-      </div>
-
-      <div class="tec__grid">
-        <div class="tec__steps">
-          <div class="tec__step">
-            <div class="tec__step-num">DDC</div>
-            <div class="tec__step-content">
-              <h3>Digital Depth Control</h3>
-              <p>Tecnologia exclusiva que permite controle preciso da profundidade de cada disparo. Personalize cada sessão para cada paciente, tipo de pele e região tratada.</p>
-            </div>
-          </div>
-          <div class="tec__step">
-            <div class="tec__step-num">SMAS</div>
-            <div class="tec__step-content">
-              <h3>Ação Profunda Real</h3>
-              <p>Atingindo a camada músculo-aponeurótica superficial, o HIPRO gera o mesmo efeito de um lifting cirúrgico — sem incisão, sem risco, sem recuperação.</p>
-            </div>
-          </div>
-          <div class="tec__step">
-            <div class="tec__step-num">∞</div>
-            <div class="tec__step-content">
-              <h3>Sem Cartucho</h3>
-              <p>Sem custo recorrente de cartucho. Sua margem é protegida em cada procedimento. ROI mais rápido, rentabilidade permanentemente alta.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="tec__visual">
-          <div class="skin-layers">
-            <div class="layer layer--1"><span>Epiderme</span><div class="layer-bar"></div></div>
-            <div class="layer layer--2"><span>Derme</span><div class="layer-bar"></div></div>
-            <div class="layer layer--3"><span>Sub-derme</span><div class="layer-bar"></div></div>
-            <div class="layer layer--4 layer--active"><span>SMAS ✦ HIPRO atua aqui</span><div class="layer-bar"></div></div>
-            <div class="layer layer--5"><span>Músculo</span><div class="layer-bar"></div></div>
-            <div class="beam beam--1"></div>
-            <div class="beam beam--2"></div>
-            <div class="beam beam--3"></div>
-            <div class="beam-source"></div>
-          </div>
-          <div class="tec__badges">
-            <div class="tbadge"><span class="tbadge__n">4.5mm</span><span class="tbadge__l">Profundidade SMAS</span></div>
-            <div class="tbadge"><span class="tbadge__n">3.0mm</span><span class="tbadge__l">Camada sub-dérmica</span></div>
-            <div class="tbadge"><span class="tbadge__n">1.5mm</span><span class="tbadge__l">Camada dérmica</span></div>
           </div>
         </div>
       </div>
@@ -1319,56 +957,56 @@
   <!-- BENEFÍCIOS -->
   <section class="beneficios" id="beneficios">
     <div class="container">
-      <div class="section-label">Vantagens Competitivas</div>
-      <h2 class="section-title">Por que oferecer<br><em>o HIPRO</em> na sua clínica?</h2>
+      <div class="section-label">Para a sua clínica</div>
+      <h2 class="section-title">O que muda quando<br>você traz o <em>HIPRO</em></h2>
       <div class="ben__grid">
         <div class="ben-card">
           <div class="ben-card__top"><span class="ben-card__icon">⚡</span><span class="ben-card__tag">Alta Demanda</span></div>
-          <h3>Lifting sem Cirurgia</h3>
-          <p>Tratamento com enorme apelo no mercado: resultados cirúrgicos sem os riscos e downtime de um procedimento invasivo. O que sua paciente mais quer — agora disponível na sua clínica.</p>
+          <h3>O procedimento que seu paciente já está procurando</h3>
+          <p>Lifting sem cirurgia é a categoria de maior crescimento na estética. A demanda está formada — a sua clínica só precisa estar posicionada para capturá-la.</p>
         </div>
         <div class="ben-card">
           <div class="ben-card__top"><span class="ben-card__icon">💎</span><span class="ben-card__tag">Ticket Alto</span></div>
-          <h3>Retorno Financeiro Rápido</h3>
-          <p>Um dos equipamentos com maior ticket médio por sessão no mercado estético. Alta rentabilidade com custo operacional mínimo — sem cartucho, sem insumos caros, sem desperdiço.</p>
+          <h3>Um dos maiores tickets do mercado estético</h3>
+          <p>Alto valor percebido, custo operacional próximo de zero, sem cartucho, sem insumo caro. A equação financeira do HIPRO é raramente encontrada em qualquer outro equipamento.</p>
         </div>
         <div class="ben-card featured">
-          <div class="ben-card__top"><span class="ben-card__icon">🎯</span><span class="ben-card__tag">Destaque</span></div>
-          <h3>Diferencial Clínico Real</h3>
-          <p>Tecnologia de ponta que coloca sua clínica na vanguarda da medicina estética e atrai um perfil premium de pacientes. Quem tem HIPRO não precisa competir por preço — compete por qualidade.</p>
+          <div class="ben-card__top"><span class="ben-card__icon">🎯</span><span class="ben-card__tag">Posicionamento</span></div>
+          <h3>Sua clínica deixa de competir por preço</h3>
+          <p>Quem tem HIPRO atrai um perfil diferente de paciente — exigente, premium, que indica. Você passa a ser referência, não uma opção entre tantas.</p>
           <div class="card-shine"></div>
         </div>
         <div class="ben-card">
           <div class="ben-card__top"><span class="ben-card__icon">📈</span><span class="ben-card__tag">Escalável</span></div>
-          <h3>Múltiplas Indicações</h3>
-          <p>Face e corpo: flacidez, papada, abdômen, braços, coxas, glúteos. Um equipamento com dezenas de protocolos — multiply suas possibilidades de agenda e de receita.</p>
+          <h3>Face e corpo — dezenas de protocolos</h3>
+          <p>Papada, flacidez facial, abdômen, braços, coxas, glúteos. Um único equipamento com múltiplas indicações, que expande sua agenda e diversifica sua receita.</p>
         </div>
         <div class="ben-card">
-          <div class="ben-card__top"><span class="ben-card__icon">🤝</span><span class="ben-card__tag">Suporte Total</span></div>
-          <h3>Parceria Completa</h3>
-          <p>Comprando com a Essenza: curso avançado, desconto oficial, mentoria e suporte especializado contínuo para você e sua equipe. Não é só venda — é parceria real de longo prazo.</p>
+          <div class="ben-card__top"><span class="ben-card__icon">🤝</span><span class="ben-card__tag">Suporte Real</span></div>
+          <h3>Não é uma venda. É uma parceria.</h3>
+          <p>Certificação, mentoria clínica, suporte comercial e acompanhamento técnico. A Essenza permanece ao seu lado do primeiro protocolo ao paciente fidelizado.</p>
         </div>
         <div class="ben-card">
-          <div class="ben-card__top"><span class="ben-card__icon">🛡️</span><span class="ben-card__tag">Segurança</span></div>
-          <h3>Financiamento Facilitado</h3>
-          <p>Parcelamento em até 36x + 60 dias para começar a pagar. Comece a gerar receita antes de sentir o investimento no seu caixa. Condição exclusiva de representante oficial.</p>
+          <div class="ben-card__top"><span class="ben-card__icon">🛡️</span><span class="ben-card__tag">Condição Exclusiva</span></div>
+          <h3>Fatura antes de pagar a primeira parcela</h3>
+          <p>36x com 60 dias de carência. Preço exclusivo de representante oficial. Você começa a gerar receita com o equipamento antes de qualquer desembolso.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ROI — RETORNO SOBRE INVESTIMENTO -->
+  <!-- ROI -->
   <section class="roi" id="roi">
     <div class="container">
       <div class="roi__inner">
         <div class="roi__text">
           <div class="section-label">O dinheiro que você vai gerar</div>
-          <h2 class="section-title">Calcule o seu<br><em>retorno real</em></h2>
-          <p>O HIPRO não é um custo — é um gerador de receita. Com ticket médio elevado, custo operacional mínimo e alta demanda, o equipamento se paga rapidamente e passa a ser lucro puro.</p>
-          <p>Clínicas que adquiriram o HIPRO pela Essenza relatam retorno sobre o investimento em <strong>média de 3 a 6 meses</strong> — dependendo da agenda e da precificação. Com apenas 2 a 3 sessões por semana, o equipamento já cobre suas parcelas mensais.</p>
-          <p>E além do retorno financeiro: pacientes satisfeitas indicam, sua reputação cresce, sua agenda se solidifica. <strong>O efeito composto do HIPRO na sua clínica é exponencial.</strong></p>
+          <h2 class="section-title">O HIPRO não é<br>uma despesa.<br><em>É uma posição.</em></h2>
+          <p>Com custo operacional próximo de zero e um dos maiores tickets do mercado estético, o equipamento se paga com velocidade e passa a ser receita pura a cada sessão realizada.</p>
+          <p>Clínicas parceiras da Essenza reportam retorno sobre o investimento em <strong>3 a 6 meses</strong> — com apenas 2 a 3 sessões semanais cobrindo as parcelas mensais desde o início.</p>
+          <p>Além da receita direta: cada paciente satisfeita gera indicações. A agenda se consolida. A reputação cresce. <strong>O HIPRO tem efeito composto — e ele começa no primeiro uso.</strong></p>
           <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary mt">
-            <span>Calcular meu potencial</span>
+            <span>Quero minha projeção personalizada</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -1388,14 +1026,14 @@
               <span class="roi__row-val">~16 sessões</span>
             </div>
             <div class="roi__row">
-              <span class="roi__row-label">Custo operacional (insumos)</span>
-              <span class="roi__row-val" style="color:#e07272">Quase zero</span>
+              <span class="roi__row-label">Custo de insumo por sessão</span>
+              <span class="roi__row-val" style="color:#e07272">R$ 0</span>
             </div>
             <div class="roi__row roi__row--total">
               <span class="roi__row-label">Faturamento mensal potencial</span>
               <span class="roi__row-val">R$ 28.800</span>
             </div>
-            <p class="roi__disclaimer">* Simulação ilustrativa. Resultados reais dependem da agenda, precificação e localidade. Nossos especialistas podem montar uma projeção personalizada para sua clínica.</p>
+            <p class="roi__disclaimer">* Simulação ilustrativa com agenda conservadora. Nossa equipe monta uma projeção real para o seu perfil de clínica.</p>
           </div>
         </div>
       </div>
@@ -1407,7 +1045,7 @@
     <div class="container">
       <div class="dep__header">
         <div class="section-label centered">Quem já decidiu</div>
-        <h2 class="section-title centered">O que dizem as<br><em>clínicas parceiras</em></h2>
+        <h2 class="section-title centered">A decisão que<br><em>transformou essas clínicas</em></h2>
       </div>
       <div class="dep__grid">
         <div class="dep-card">
@@ -1419,7 +1057,7 @@
             <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           </div>
           <blockquote>
-            "Tínhamos medo de investir. No primeiro mês com o HIPRO, realizamos 8 procedimentos e já pagamos a primeira parcela. Em três meses, pagamos o equipamento inteiro."
+            "Tínhamos medo de investir. No primeiro mês realizamos 8 procedimentos e já pagamos a primeira parcela. Em três meses, pagamos o equipamento inteiro."
           </blockquote>
           <div class="dep-card__author">
             <div class="dep-card__avatar">D</div>
@@ -1457,7 +1095,7 @@
             <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           </div>
           <blockquote>
-            "Desde que trouxe o HIPRO para a clínica, o perfil das minhas pacientes mudou completamente. Hoje atendo um público premium, indicações em cadeia, e me tornei referência na minha cidade."
+            "Desde que trouxe o HIPRO, o perfil das minhas pacientes mudou completamente. Hoje atendo um público premium, com indicações em cadeia, e me tornei referência na minha cidade."
           </blockquote>
           <div class="dep-card__author">
             <div class="dep-card__avatar">F</div>
@@ -1471,171 +1109,20 @@
     </div>
   </section>
 
-  <!-- INDICAÇÕES -->
-  <section class="indicacoes" id="indicacoes">
-    <div class="container">
-      <div class="ind__grid">
-        <div class="ind__left">
-          <div class="section-label">Aplicações Clínicas</div>
-          <h2 class="section-title">Indicado para<br><em>face e corpo</em></h2>
-          <p>O HIPRO oferece protocolos específicos para cada região, com energia e profundidade ajustadas para máxima eficácia e segurança. Um equipamento, dezenas de protocolos, centenas de oportunidades de receita.</p>
-          <div class="ind__tabs">
-            <button class="ind__tab active" data-target="face">Rosto</button>
-            <button class="ind__tab" data-target="corpo">Corpo</button>
-          </div>
-          <div class="ind__list active" id="face">
-            <div class="ind__item"><span class="ind__dot"></span>Flacidez facial e papada</div>
-            <div class="ind__item"><span class="ind__dot"></span>Laxidez de mandíbula (bulldog)</div>
-            <div class="ind__item"><span class="ind__dot"></span>Sobrancelhas caídas</div>
-            <div class="ind__item"><span class="ind__dot"></span>Sulcos nasolabiais e rugas</div>
-            <div class="ind__item"><span class="ind__dot"></span>Marcas de expressão</div>
-            <div class="ind__item"><span class="ind__dot"></span>Contorno facial e redefinição de óvulo</div>
-          </div>
-          <div class="ind__list" id="corpo">
-            <div class="ind__item"><span class="ind__dot"></span>Flacidez abdominal</div>
-            <div class="ind__item"><span class="ind__dot"></span>Flacidez de braços</div>
-            <div class="ind__item"><span class="ind__dot"></span>Flacidez interna de coxas</div>
-            <div class="ind__item"><span class="ind__dot"></span>Glúteos e região posterior</div>
-            <div class="ind__item"><span class="ind__dot"></span>Região do pescoço e decote</div>
-            <div class="ind__item"><span class="ind__dot"></span>Joelhos e região periorbital</div>
-          </div>
-        </div>
-        <div class="ind__right">
-          <div class="ind__photo-wrap">
-            <div class="ind__photo-glow"></div>
-            <img src="face corpo.JPG" alt="Indicações face e corpo HIPRO" class="ind__photo" />
-            <div class="ind__photo-overlay"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GARANTA SEU DIFERENCIAL -->
-  <section class="garanta" id="garanta">
-    <div class="container">
-      <div class="garanta__inner">
-        <div class="garanta__text">
-          <div class="section-label">Agora é a hora</div>
-          <h2 class="section-title">
-            Enquanto você hesita,<br>sua <em>concorrente decide</em>
-          </h2>
-          <p>
-            Cada semana sem o HIPRO é uma semana com agenda incompleta, pacientes que vão para outra clínica e receita que fica na mesa. A tecnologia está disponível agora — e a condição de pagamento nunca esteve tão acessível.
-          </p>
-          <ul class="garanta__list">
-            <li>Financiamento em até 36x com 60 dias para começar a pagar</li>
-            <li>Preço exclusivo de representante oficial — menor que no mercado aberto</li>
-            <li>Curso de certificação incluso para você e sua equipe</li>
-            <li>Mentoria comercial para captação das primeiras pacientes</li>
-            <li>Suporte técnico especializado com atendimento prioritário</li>
-            <li>Protocolo de tratamento completo face e corpo entregue no treinamento</li>
-          </ul>
-          <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary">
-            <span>Quero garantir minha proposta</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="garanta__visual">
-          <div class="garanta__number-block">
-            <span class="garanta__big-num">36x</span>
-            <span class="garanta__big-label">Parcelas sem entrada</span>
-          </div>
-          <div class="garanta__sub-stats">
-            <div class="garanta__sub">
-              <span>60</span>
-              <small>dias para começar a pagar</small>
-            </div>
-            <div class="garanta__sub">
-              <span>0</span>
-              <small>custo de cartucho</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <div class="faq__header">
-        <div class="section-label centered">Dúvidas frequentes</div>
-        <h2 class="section-title centered">Tudo que você<br><em>precisa saber</em></h2>
-      </div>
-      <div class="faq__list">
-        <div class="faq__item open">
-          <button class="faq__question">
-            O HIPRO funciona mesmo? Qual a diferença para outros ultrassons?
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Sim. A grande diferença do HIPRO está na tecnologia DDC (Digital Depth Control) — exclusiva no mercado — que permite controlar com precisão absoluta a profundidade de cada disparo. Isso significa que o equipamento consegue atingir a SMAS (camada mais profunda) de forma consistente e segura, gerando um resultado muito superior ao de aparelhos que operam em profundidades fixas. Além disso, o HIPRO não usa cartuchos descartáveis, o que reduz o custo operacional e aumenta sua margem por sessão.</p>
-          </div>
-        </div>
-        <div class="faq__item">
-          <button class="faq__question">
-            Qual o perfil de profissional que pode usar o HIPRO?
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>O HIPRO pode ser operado por médicos, biomédicos esteticistas, enfermeiros com habilitação em estética e fisioterapeutas dermato-funcionais, de acordo com a regulamentação de cada conselho profissional. Nossos cursos são adaptados para cada perfil profissional, e nosso time orienta cada cliente sobre as melhores práticas para sua realidade clínica.</p>
-          </div>
-        </div>
-        <div class="faq__item">
-          <button class="faq__question">
-            Quantas sessões o paciente precisa fazer para ter resultado?
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>O HIPRO já entrega resultado visível a partir da primeira sessão — o efeito lifting imediato é perceptível logo após o procedimento. Com o tempo, a neocolagênese (produção de novo colágeno) continua por 90 dias, progressivamente melhorando o resultado. A maioria dos pacientes realiza de 1 a 2 sessões por ano para manutenção dos efeitos, que duram em média de 12 a 18 meses. Isso cria um fluxo recorrente de receita para sua clínica.</p>
-          </div>
-        </div>
-        <div class="faq__item">
-          <button class="faq__question">
-            Como funciona o financiamento? Preciso de entrada?
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Trabalhamos com condições exclusivas de representante oficial. A modalidade mais procurada é o parcelamento em até 36x com 60 dias de carência para começar a pagar — o que significa que você terá dois meses de receita com o equipamento antes de desembolsar a primeira parcela. As condições exatas dependem de cada perfil, e nossa equipe apresenta a melhor proposta personalizada para a sua realidade. Entre em contato para receber uma simulação completa.</p>
-          </div>
-        </div>
-        <div class="faq__item">
-          <button class="faq__question">
-            Vocês oferecem treinamento e suporte após a compra?
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Absolutamente. A Essenza é parceira — não apenas vendedora. Todo cliente recebe: curso completo de certificação nos protocolos de face e corpo, treinamento para a equipe, suporte técnico prioritário e acompanhamento comercial para captação das primeiras pacientes. Temos mentorias específicas para ajudá-lo a precificar corretamente, posicionar o serviço e criar uma demanda consistente.</p>
-          </div>
-        </div>
-        <div class="faq__item">
-          <button class="faq__question">
-            O HIPRO tem garantia? E se o equipamento apresentar problema?
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Sim. O HIPRO acompanha garantia completa do fabricante e suporte técnico especializado pela Essenza. Em caso de qualquer problema, você tem atendimento prioritário e resolução rápida — porque sabemos que equipamento parado é receita perdida, e não vamos deixar isso acontecer com nosso cliente.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- URGÊNCIA / CTA FORTE -->
+  <!-- URGÊNCIA / OFERTA -->
   <section class="urgencia" id="urgencia">
     <div class="container">
       <div class="urgencia__inner">
         <div class="urgencia__label">
           <span class="urgencia__label-dot"></span>
-          Oportunidade por tempo limitado
+          Condição por tempo limitado
         </div>
         <h2>
-          A condição de <em>36x + 60 dias</em><br>
-          não é permanente.
+          Dois meses de receita<br>
+          antes de pagar <em>a primeira parcela.</em>
         </h2>
         <p>
-          Essa é a melhor condição que já oferecemos — e ela não vai durar. Se você está lendo isso agora, é porque chegou a hora de tomar a decisão que vai transformar a sua clínica. Nossa equipe está disponível agora para atender você e apresentar uma proposta personalizada.
+          36x com 60 dias de carência. Preço exclusivo de representante oficial — abaixo do mercado aberto. A sua clínica começa a faturar com o HIPRO antes de qualquer desembolso. Nossa equipe está pronta para montar sua proposta agora.
         </p>
         <div class="urgencia__actions">
           <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary btn--lg">
@@ -1650,71 +1137,66 @@
     </div>
   </section>
 
-  <!-- ESSENZA -->
-  <section class="essenza" id="essenza">
+  <!-- FAQ -->
+  <section class="faq" id="faq">
     <div class="container">
-      <div class="essenza__inner">
-        <div class="essenza__text">
-          <div class="section-label">Representante Oficial</div>
-          <h2 class="section-title">Comprando com a<br><em>Essenza</em>, você ganha:</h2>
-          <div class="essenza__perks">
-            <div class="perk">
-              <div class="perk__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
-              </div>
-              <div>
-                <h4>Venda com Condição Exclusiva</h4>
-                <p>Preço de representante oficial e financiamento em até 36x + 60 dias para começar a pagar — só via Essenza.</p>
-              </div>
-            </div>
-            <div class="perk">
-              <div class="perk__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 17H5a2 2 0 00-2 2v1h18v-1a2 2 0 00-2-2h-4M12 3v10m0 0l-3-3m3 3l3-3"/><rect x="5" y="3" width="14" height="11" rx="2"/></svg>
-              </div>
-              <div>
-                <h4>Locação Flexível</h4>
-                <p>Acesse o HIPRO sem compra imediata. Contratos adaptados ao seu fluxo de caixa, com suporte técnico incluso.</p>
-              </div>
-            </div>
-            <div class="perk">
-              <div class="perk__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
-              </div>
-              <div>
-                <h4>Cursos &amp; Certificação</h4>
-                <p>Treinamento completo — protocolos de face e corpo — com certificação reconhecida para você e toda a sua equipe.</p>
-              </div>
-            </div>
-            <div class="perk">
-              <div class="perk__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              </div>
-              <div>
-                <h4>Mentorias Especializadas</h4>
-                <p>Acompanhamento clínico e comercial para maximizar resultados, precificação e captação de pacientes premium.</p>
-              </div>
-            </div>
+      <div class="faq__header">
+        <div class="section-label centered">Tire suas dúvidas</div>
+        <h2 class="section-title centered">O que você precisa<br><em>saber antes de decidir</em></h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item open">
+          <button class="faq__question">
+            O HIPRO realmente entrega resultado diferente de outros ultrassons?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Sim — e a diferença é técnica e clínica. O DDC (Digital Depth Control) é exclusivo do HIPRO: permite controlar a profundidade exata de cada disparo, atingindo a SMAS de forma consistente e segura. Aparelhos com profundidade fixa não têm esse nível de precisão. O resultado é visivelmente superior — e o paciente percebe isso na primeira sessão.</p>
           </div>
         </div>
-        <div class="essenza__finance">
-          <div class="finance-card">
-            <div class="finance-card__header"><span>Financiamento Especial</span></div>
-            <div class="finance-card__body">
-              <div class="fin-main">
-                <span class="fin-x">36</span>
-                <span class="fin-vezes">x</span>
-              </div>
-              <div class="fin-plus">+</div>
-              <div class="fin-days">
-                <span class="fin-d">60</span>
-                <span class="fin-dl">dias para<br>começar a pagar</span>
-              </div>
-              <div class="fin-tag">Preço melhor que Black Friday</div>
-            </div>
-            <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary full">
-              <span>Quero essa Condição</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+        <div class="faq__item">
+          <button class="faq__question">
+            Quantas sessões o paciente precisa? Isso afeta a recorrência da minha agenda?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>O resultado é visível a partir da primeira sessão — com efeito tensor imediato e melhora progressiva por 90 dias via neocolagênese. A duração é de 12 a 18 meses, o que cria um ciclo natural de retorno: 1 a 2 sessões por ano para manutenção. Isso significa receita recorrente previsível e paciente fidelizada ao seu consultório.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            Como funciona o financiamento? Preciso de entrada?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>A condição mais procurada é 36x com 60 dias de carência — sem entrada. Você tem dois meses completos de receita com o equipamento antes de pagar a primeira parcela. As condições específicas variam por perfil; nossa equipe monta uma proposta personalizada com a melhor simulação para a sua realidade.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            Que tipo de suporte recebo após a aquisição?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Certificação completa nos protocolos de face e corpo, treinamento para a sua equipe, mentoria clínica e comercial, e suporte técnico com atendimento prioritário. A Essenza não entrega o equipamento e some — acompanha até a sua agenda estar estruturada e seu posicionamento consolidado.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            Quais profissionais podem operar o HIPRO?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Médicos, biomédicos esteticistas, enfermeiros com habilitação em estética e fisioterapeutas dermato-funcionais, conforme a regulamentação de cada conselho. Nossa equipe orienta cada cliente sobre as especificidades para o seu perfil profissional e regional.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question">
+            Há garantia? E se o equipamento apresentar problema?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>O HIPRO vem com garantia completa do fabricante e suporte técnico especializado pela Essenza. Em qualquer eventualidade, você tem atendimento prioritário e resolução ágil. Sabemos que equipamento parado é receita perdida — e esse comprometimento faz parte da nossa parceria.</p>
           </div>
         </div>
       </div>
@@ -1726,9 +1208,9 @@
     <div class="contato-bg"><div class="contato-orb"></div></div>
     <div class="container">
       <div class="contato__inner">
-        <div class="section-label centered">Entre em Contato</div>
-        <h2 class="section-title centered">Leve o HIPRO para<br>sua <em>clínica agora</em></h2>
-        <p class="contato__desc">Nossa equipe está pronta para apresentar uma proposta personalizada e ajudá-la a transformar seu negócio com a mais avançada tecnologia estética do mercado. Sem pressão — só clareza sobre o que o HIPRO pode fazer pela sua clínica.</p>
+        <div class="section-label centered">O próximo passo é seu</div>
+        <h2 class="section-title centered">A clínica que você quer<br>construir <em>começa aqui</em></h2>
+        <p class="contato__desc">Nossa equipe apresenta uma proposta personalizada, tira todas as suas dúvidas e mostra exatamente como o HIPRO se encaixa na realidade da sua clínica. Sem pressão. Sem script de vendas.</p>
         <div class="contato__actions">
           <a href="https://wa.me/5531989670337" target="_blank" class="btn btn--primary btn--lg">
             <svg viewBox="0 0 24 24" fill="currentColor" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1757,12 +1239,11 @@
           <p class="footer__sub">Representante Oficial HIPRO</p>
         </div>
         <div class="footer__links">
-          <a href="#sobre">Sobre</a>
-          <a href="#mercado">Mercado</a>
-          <a href="#servicos">Serviços</a>
+          <a href="#sobre">O Equipamento</a>
           <a href="#beneficios">Benefícios</a>
-          <a href="#tecnologia">Tecnologia</a>
-          <a href="#indicacoes">Indicações</a>
+          <a href="#roi">Retorno</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#faq">Dúvidas</a>
           <a href="#contato">Contato</a>
         </div>
         <div class="footer__contact">

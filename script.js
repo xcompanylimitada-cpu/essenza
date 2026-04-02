@@ -290,12 +290,6 @@ function initScrollAnimations() {
     });
   });
 
-  // Video section
-  gsap.fromTo('.video-wrapper', { opacity: 0, y: 30, scale: .97 }, {
-    opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out',
-    scrollTrigger: { trigger: '.video-wrapper', start: 'top 85%', once: true }
-  });
-
   // Contato CTA
   gsap.fromTo('.contato__actions', { opacity: 0, y: 24 }, {
     opacity: 1, y: 0, duration: .9, ease: 'power3.out',
@@ -305,14 +299,6 @@ function initScrollAnimations() {
   // Parallax hero grid
   gsap.to('.hero__grid', {
     yPercent: -25, ease: 'none',
-    scrollTrigger: {
-      trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true
-    }
-  });
-
-  // Hero device subtle float on scroll
-  gsap.to('.hero__image-wrap', {
-    yPercent: -8, ease: 'none',
     scrollTrigger: {
       trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true
     }

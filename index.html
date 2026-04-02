@@ -785,10 +785,12 @@
         0 40px 100px rgba(0,0,0,.6),
         0 0 80px rgba(201,184,158,.08);
     }
-    .video-wrapper video {
+    .video-wrapper iframe {
       display: block;
       width: 100%;
+      aspect-ratio: 9/16;
       border-radius: 28px;
+      border: none;
     }
     .video-wrapper__badge {
       position: absolute;
@@ -974,12 +976,12 @@
       box-shadow: 0 0 0 1px var(--border-light), 0 20px 60px rgba(0,0,0,.4);
       transform: translateY(-4px);
     }
-    .dep-video-card video {
+    .dep-video-card iframe {
       display: block;
       width: 100%;
       aspect-ratio: 9/16;
-      object-fit: cover;
       border-radius: 20px;
+      border: none;
     }
     .dep-video-card__overlay {
       position: absolute;
@@ -1184,12 +1186,13 @@
         <h2 class="section-title centered">O HIPRO que <em>transforma</em></h2>
       </div>
       <div class="video-wrapper">
-        <video
-          src="Essenza - Vendas V2.mp4"
-          loop
-          playsinline
-          controls
-        ></video>
+        <iframe
+          src="https://www.youtube.com/embed/mafhaK8q-Ss?rel=0&modestbranding=1&loop=1&playlist=mafhaK8q-Ss"
+          title="O HIPRO que transforma"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </section>
@@ -1551,7 +1554,7 @@
       </div>
       <div class="dep-video__grid">
         <div class="dep-video-card" data-video>
-          <video src="Depoimento .MOV" muted playsinline preload="metadata" loop></video>
+          <iframe src="https://www.youtube.com/embed/N_0r8PYSpeE?rel=0&modestbranding=1&loop=1&playlist=N_0r8PYSpeE" title="Depoimento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="dep-video-card__overlay"></div>
           <div class="dep-video-card__play">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -1561,7 +1564,7 @@
           </div>
         </div>
         <div class="dep-video-card" data-video>
-          <video src="b4f4b04c42db4820acbdc3d8ca222bc3.MOV" muted playsinline preload="metadata" loop></video>
+          <iframe src="https://www.youtube.com/embed/zRI-AZgjqhI?rel=0&modestbranding=1&loop=1&playlist=zRI-AZgjqhI" title="Depoimento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="dep-video-card__overlay"></div>
           <div class="dep-video-card__play">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -1571,7 +1574,7 @@
           </div>
         </div>
         <div class="dep-video-card" data-video>
-          <video src="copy_3A51A303-B6A0-4670-9E65-371F593E4DDB.MOV" muted playsinline preload="metadata" loop></video>
+          <iframe src="https://www.youtube.com/embed/X59xfj8v5mk?rel=0&modestbranding=1&loop=1&playlist=X59xfj8v5mk" title="Depoimento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="dep-video-card__overlay"></div>
           <div class="dep-video-card__play">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -1581,7 +1584,7 @@
           </div>
         </div>
         <div class="dep-video-card" data-video>
-          <video src="copy_D006015A-8D12-4E23-A152-E6A8289CDE0D.MOV" muted playsinline preload="metadata" loop></video>
+          <iframe src="https://www.youtube.com/embed/dVowCcuNsMQ?rel=0&modestbranding=1&loop=1&playlist=dVowCcuNsMQ" title="Depoimento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="dep-video-card__overlay"></div>
           <div class="dep-video-card__play">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -1774,29 +1777,7 @@
       dorItems.forEach(el => observer.observe(el));
     }
 
-    // Video testimonials — click to play/pause with sound
-    document.querySelectorAll('[data-video]').forEach(card => {
-      const video = card.querySelector('video');
-      card.addEventListener('click', () => {
-        if (video.paused) {
-          // Pause all other videos first
-          document.querySelectorAll('[data-video] video').forEach(v => {
-            if (v !== video) {
-              v.pause();
-              v.muted = true;
-              v.closest('[data-video]').classList.remove('playing');
-            }
-          });
-          video.muted = false;
-          video.play();
-          card.classList.add('playing');
-        } else {
-          video.pause();
-          video.muted = true;
-          card.classList.remove('playing');
-        }
-      });
-    });
+
   </script>
 </body>
 </html>
